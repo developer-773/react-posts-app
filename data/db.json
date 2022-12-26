@@ -1,0 +1,57 @@
+{
+  "posts": [
+    {
+      "user_id": 1,
+      "title": "AQSH da kuchli bo‘ron 35 kishining hayotiga zomin bo‘ldi",
+      "user_name": "Muhammadbek Jo'rabekov",
+      "body": "Yakshanba kuni AQSHning Sharqiy qirg‘og‘i, Texas va Vashington shtatlarida 200 mingdan ortiq uy va korxona elektr energiyasidan mahrum bo‘ldi. PowerOutage.us ma’lumotlariga ko‘ra,  bir kun avval shanba kuni 1,8 million odam elektrsiz qolgan. Rasmiylarning aytishicha, Buffaloda yakshanba kuni aholining 16 foizi elektrsiz qolgan. \n\n",
+      "created_at": {
+        "date": "26.12.2022, 15:43"
+      },
+      "id": 1
+    },
+    {
+      "user_id": 2,
+      "title": "Davlat test markazi tugatilmoqda",
+      "body": "\n\n\n\nDavlat test markazi (1994–2022 yillar) tugatilmoqda. Uning o‘rniga 2023 yil 1 yanvardan “Bilim va malakalarni baholash agentligi” o‘z ishini boshlaydi. Bu haqda DTM matbuot xizmati xabar berdi.\n\nUshbu agentlik Oliy va O‘rta maxsus ta’lim vazirligi negizida Oliy ta’lim fan va innovatsiyalar vazirligiga qarashli tashkilotga aylanadi.\n\nShuningdek, Oliy va o‘rta maxsus ta’lim vazirligi negizida Oliy ta’lim, fan va innovatsiyalar vazirligi tashkil etilmoqda.",
+      "user_name": "Ali Valiyev",
+      "created_at": {
+        "date": "26.12.2022, 15:50"
+      },
+      "id": 2
+    },
+    {
+      "user_id": 3,
+      "title": "Xitoyda bir kunda 37 million kishi koronavirusga chalindi",
+      "body": "Xitoyda bir sutka ichida 37 mln kishi koronavirusga chalinganligi aytilmoqda. Bu haqda Bloomberg nashri xabar berdi.\n\nXitoy Milliy sog‘liqni saqlash komissiyasining yopiq yig‘ilishida koronavirus bilan kasallanish bo‘yicha statistik ma’lumotlar e’lon qilingan. Yig‘ilish bayonnomasiga ko‘ra,  bir kun ichida Xitoyda 37 million odam koronavirus yuqtirgan. Umumiy hisobda dekabr oyining birinchi 20 kunida mamlakatda 248 million kishida kasallik aniqlangan.\n\nShuningdek, bayonnomada virusdan vafot etganlar soni to‘g‘risida ma’lumotlar ko‘rsatilmagan.\n\nMamlakatda kasallanishlar sonining oshib ketishiga yaqinda Pekinda karantin cheklovlarini ancha yengilashtirilishi sababligi aytilmoqda. Bu esa tabiiy immuniteti past xitoyliklar orasida o‘ta yuqumli omikron shtammining keng tarqalishiga olib kelgan",
+      "user_name": "Czn Burak",
+      "created_at": {
+        "date": "26.12.2022, 15:52"
+      },
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "email": "a@gmail.com",
+      "password": "$2a$10$yZuDylxVTQLtKcMOaK.m/.Y2Q/CF3EmSCeDxo402t3SeKkemLQ53O",
+      "firstname": "Muhammadbek",
+      "lastname": "Jo'rabekov",
+      "id": 1
+    },
+    {
+      "email": "vali@v.gmail.com",
+      "password": "$2a$10$JnCI8TqlOpmGOp0yA0Mwo.ETjmj1DBFeR.9jzmnuUBJoUZWF7ANXK",
+      "firstname": "Ali",
+      "lastname": "Valiyev",
+      "id": 2
+    },
+    {
+      "email": "burak@gmail.com",
+      "password": "$2a$10$qI3GRiZkM1BAuYkkOk2hse/asWx.MpDzgWy64nGyC6chmMZDWmFwe",
+      "firstname": "Czn",
+      "lastname": "Burak",
+      "id": 3
+    }
+  ]
+}

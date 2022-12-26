@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Home } from "./pages/Home/Home";
+import { Login } from "./pages/Login/Login";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext"
+import { Register } from "./pages/Register/Register";
+import { Private } from "./apps/Private";
+import { Public } from "./apps/Public";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const App = () => {
+	const { token } = useContext(AuthContext);
 
-export default App;
+	if (token) {
+		return <Private />
+	}
+	return <Public />
+
+	// if (!token) {
+	// 	return <Login />;
+	// }
+	// return <Home />;
+	
+	
+};
