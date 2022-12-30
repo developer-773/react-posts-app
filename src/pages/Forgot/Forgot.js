@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { UidContext } from "../../context/UidContext";
 
 import "./Forgot.css";
+import { MeContext } from "../../context/MeContext";
 
 export const Forgot = () => {
 	const navigate = useNavigate();
@@ -15,7 +16,7 @@ export const Forgot = () => {
 	const [visible, setVisible] = useState(false);
 	const [emailFound, setEmailFound] = useState(undefined);
 	const { unique, setUnique } = useContext(UidContext);
-
+	const {me, setMe} = useContext(MeContext)
 	const UserNotFounded = () => {
 		return (
 			<div className={`text-center mt-5 ${visible}`}>
@@ -84,7 +85,7 @@ export const Forgot = () => {
 				<input
 					type="text"
 					name="user"
-					value={`Hello, ${valu}!`}
+					value={`Hello, ${me.firstname}!`}
 					className="d-none"
 					onChange={() => {}}
 				/>

@@ -32,7 +32,7 @@ export const NewPassword = () => {
 				if (res.status === 200) {
 					setToken(res.data.accessToken);
 					setMe(res.data.user);
-					navigate("/");
+					navigate("/successfully");
 					setUnique(`auth/${uuid()}/consumer=career&state=bslogin`);
 				}
 			})

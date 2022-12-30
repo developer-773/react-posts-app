@@ -41,6 +41,8 @@ export const Login = () => {
 		}
 	};
 
+	// axios.delete(`http://localhost:8080/users/${18}`).then(res => console.log(res))
+
 	const NotRegistered = () => {
 		return (
 			<p className={`text-danger fs-6 ${check} ? hidden : '' `}>
