@@ -16,8 +16,10 @@ export const Posts = () => {
 			.catch((err) => console.log(err));
 	}, []);
 
+
 	return (
 		<>
+
 			<h3 className="text-center my-5">Posts</h3>
 			{post?.length ? (
 				<ul className="list-unstyled d-flex flex-wrap gap-5">

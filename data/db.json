@@ -29,6 +29,56 @@
         "date": "26.12.2022, 15:52"
       },
       "id": 3
+    },
+    {
+      "user_id": 4,
+      "title": "dddd",
+      "body": "g",
+      "user_name": "mmm fffff",
+      "created_at": {
+        "date": "26.12.2022, 16:01"
+      },
+      "id": 4
+    },
+    {
+      "user_id": 4,
+      "title": "hjkjhg",
+      "body": "fhghg",
+      "user_name": "mmm fffff",
+      "created_at": {
+        "date": "26.12.2022, 16:02"
+      },
+      "id": 5
+    },
+    {
+      "user_id": 5,
+      "title": "Posts",
+      "body": "Create postssss",
+      "user_name": "Bek Jons",
+      "created_at": {
+        "date": "26.12.2022, 16:27"
+      },
+      "id": 6
+    },
+    {
+      "user_id": 15,
+      "title": "“My name is Kylian”: Mbappé, and now the comic strip",
+      "body": "After winning the Nations League with the France team last Sunday, Kylian Mbappé has, at 22, an even more unique track record. But the PSG striker will soon shine on a new ground, that of the graphic novel. On November 12, the comic strip “My name is Kylian” will be released, which he produced with the designer Faro.",
+      "user_name": "Kylian Mbappe",
+      "created_at": {
+        "date": "30.12.2022, 18:26"
+      },
+      "id": 7
+    },
+    {
+      "user_id": 16,
+      "title": "GARVARD UNIVERSITETI HAQIDA SIZ BILMAGAN FAKTLAR",
+      "body": "Uning bitiruvchilari orasida AQShning sakkiz prezidenti va 188 milliarderi ham bor, bu har qanday universitetlar orasida eng ko’p ko`rsatkichlardan biridir. O’n to’rtta Tyuring mukofoti sovrindorlari Harvard filiallari bo’lgan. Talabalar va bitiruvchilar 10 ta Akademiya mukofoti, 48 ta Pulitser mukofoti va 110 ta Olimpiada medalini (46 ta oltin) qoʻlga kiritganlar va ular koʻplab taniqli kompaniyalarga asos soldi.",
+      "user_name": "Bek Uz",
+      "created_at": {
+        "date": "30.12.2022, 19:09"
+      },
+      "id": 8
     }
   ],
   "users": [
@@ -52,6 +102,102 @@
       "firstname": "Czn",
       "lastname": "Burak",
       "id": 3
+    },
+    {
+      "email": "maxmud@gmail.com",
+      "password": "$2a$10$hyC4o/vc0HmtknwSQ7RIie2CYy7LTdKJWoOFwIYo7EYbE/qhKWZCi",
+      "firstname": "mmm",
+      "lastname": "fffff",
+      "id": 4
+    },
+    {
+      "email": "jon@gmail.com",
+      "password": "$2a$10$krBRDD4T.7dBgS54rKrvQOTnHGgE.LV4NQpL1IgnkvxbIXoBVqhXe",
+      "firstname": "Bek",
+      "lastname": "Jons",
+      "id": 5
+    },
+    {
+      "email": "tester@gmail.com",
+      "password": "$2a$10$tT9P65kF4qsCXySqgA4rluFOAOSA49.gLxeD2GDIKDDTi89F1QCQm",
+      "firstname": "",
+      "lastname": "",
+      "id": 6
+    },
+    {
+      "email": "jons@gmail.com",
+      "password": "$2a$10$ylC/0BaJ0ce5IJfSY/9Us.sAIliabDLx/ffrqwnBkD7vCU1aKhHKy",
+      "firstname": "Glid",
+      "lastname": "Johnson",
+      "id": 7
+    },
+    {
+      "email": "forgot@gmail.com",
+      "password": "$2a$10$.j2YOaoCHJ4vqkNV5cBACeN6/zZr8CmyRgy.zEP5QYi.rcbJNDSIW",
+      "firstname": "testingForgot",
+      "lastname": "testingForgotPass",
+      "id": 8
+    },
+    {
+      "email": "forgot2@gmail.com",
+      "password": "$2a$10$N39KX1YKw5abLYcq31B/JOhxPvAs.bEaYrcunnyctczXQz.X8qkEO",
+      "firstname": "forgotPass2",
+      "lastname": "forgotPass2Last",
+      "id": 9
+    },
+    {
+      "email": "galaxylogo@yandex.ru",
+      "password": "$2a$10$sCYFJRAKXG8qIENBwq/Y8.I5ni5OmU5Fgk2g1u4N/x8UiKnSK3xLK",
+      "firstname": "Daddy",
+      "lastname": "Yankee",
+      "id": 10
+    },
+    {
+      "email": "pexemer152@octovie.com",
+      "password": "$2a$10$KaJ1TdRCU2yd1LtAeUdweui48cs3JO0.MKHg5IEUAIgyzUYjbKAGm",
+      "id": 11
+    },
+    {
+      "email": "pexemer12@octovie.com",
+      "password": "$2a$10$.GT8mx5OZWsicrqeuMIZpulEuVIUDqUgFaIOqvO7gMhtn2uAJn7D.",
+      "firstname": "hackers",
+      "lastname": "pentester_junior",
+      "id": 12
+    },
+    {
+      "email": "repper@gmail.com",
+      "password": "$2a$10$XO8xQX1vnGHItmhGqGCqYecuAzvX/sJ4TybG.qNXnGKExUG7JZAcC",
+      "firstname": "Shoxrux",
+      "lastname": "Xon",
+      "id": 13
+    },
+    {
+      "email": "chan@gmail.com",
+      "password": "$2a$10$zo3LMEBQsg5jYFgxvp2CHe3B.3JjNK3cEZQZ6OnJ80MRh5fhbtzrS",
+      "firstname": "Jackie ",
+      "lastname": "Chan",
+      "id": 14
+    },
+    {
+      "email": "mbappe@gmail.com",
+      "password": "$2a$10$Qxh7Z9tztYQ1Wq4Nlc31pOI5SgfaOr7VvPViMzaYhhN8YkeBoCW2q",
+      "firstname": "Kylian",
+      "lastname": "Mbappe",
+      "id": 15
+    },
+    {
+      "email": "hak@gmail.com",
+      "password": "$2a$10$kgQ8H5KzZyj3ufscijMqquC4JmcQjyZedWuyRB8mbHX9kd00B4UbW",
+      "firstname": "pentester",
+      "lastname": "good",
+      "id": 17
+    },
+    {
+      "email": "galaxylogin@yandex.com",
+      "password": "$2a$10$SbPNNpCV9IjJ1iGq7Vse8uu3vFzQd668U1q73PD4O.1IEr06o3Pye",
+      "firstname": "Muhammadbek",
+      "lastname": "Jo'rabek",
+      "id": 18
     }
   ]
 }

@@ -3,6 +3,7 @@ import {AuthContext} from "../../context/AuthContext";
 
 export const Home = () => {
 
+
     const {token, setToken} = useContext(AuthContext)
 
     return <div>

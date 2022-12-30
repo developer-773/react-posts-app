@@ -9,9 +9,10 @@ export const MeProvider = ({children}) => {
     useEffect(() => {},[])
     if(me) {
         localStorage.setItem('me', JSON.stringify(me))
-    }else {
-        localStorage.removeItem('me')
     }
+    // }else {
+    //     localStorage.removeItem('me')
+    // }
     return (
         <MeContext.Provider value={{me, setMe}}>
             {children}

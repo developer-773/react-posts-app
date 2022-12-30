@@ -7,13 +7,16 @@ import "bootstrap/dist/js/bootstrap";
 
 import { AuthProvider } from "./context/AuthContext";
 import { MeProvider } from "./context/MeContext";
+import { UidProvider } from "./context/UidContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<BrowserRouter>
 		<AuthProvider>
 			<MeProvider>
-				<App />
+				<UidProvider>
+					<App />
+				</UidProvider>
 			</MeProvider>
 		</AuthProvider>
 	</BrowserRouter>

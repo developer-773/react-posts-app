@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useContext } from "react";
-import { Link, Route, Routes, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { MeContext } from "../../context/MeContext";
-import { SinglePost } from "./SinglePost";
 
 export const PostCard = ({data}) => {
 
@@ -13,8 +12,6 @@ export const PostCard = ({data}) => {
 
     const getPosts = async () => {
         const data = await axios.get(`http://localhost:8080/posts?user_id=${me.id}`);
-        console.log(data);
-        // setPosts(data.data)
     }
 
     getPosts()

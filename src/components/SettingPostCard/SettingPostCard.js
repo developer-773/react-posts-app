@@ -10,7 +10,6 @@ export const SettingPostCard = ({ item, getPosts }) => {
 	const bodyRef = useRef();
 
 	const { me, setMe } = useContext(MeContext);
-	const [addPostModal, setAddPostModal] = useState(false);
 	const [editModal, setEditModal] = useState(false);
 	const date = new Date().toLocaleString().substring(0, 17);
 
@@ -26,19 +25,18 @@ export const SettingPostCard = ({ item, getPosts }) => {
 				created_at: { date },
 			})
 			.then((res) => {
-				console.log(res);
 				if (res.status === 200) {
 					setEditModal(false);
 					getPosts();
 				}
 			})
-			.catch((err) => console.log(err));
+			.catch((err) => () => {});
 	};
 
 	const handleDelete = () => {
 		axios
 			.delete(`http://localhost:8080/posts/${id}`)
-			.then((res) => console.log(res))
+			.then((res) => () => {})
 			.catch((err) => console.log(err));
             getPosts()
 	};

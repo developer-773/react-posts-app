@@ -1,8 +1,17 @@
+import { useContext } from "react";
 import { Link, Route, Routes, Navigate } from "react-router-dom";
+import { UidContext } from "../context/UidContext";
+import { Forgot } from "../pages/Forgot/Forgot";
+import {NewPassword} from "../pages/Forgot/NewPassword";
+import SuccessfullReset from "../pages/Forgot/SuccessfullReset";
 import { Login } from "../pages/Login/Login";
 import { Register } from "../pages/Register/Register";
 
+
 export const Public = () => {
+	const { unique, setUnique } = useContext(UidContext);
+
+
 	return (
 		<div>
 			<header className="bg-light p-3">
@@ -34,7 +43,10 @@ export const Public = () => {
 					/>
 					<Route path="/login" element={<Login />} />
 					<Route path="/register" element={<Register />} />
-					<Route path="*" element={<Navigate to="/login" replace={true} />} />
+					<Route path="/forgot" element={<Forgot />}/>
+					<Route path="/successfully" element={<SuccessfullReset />}/>
+					<Route path={`/reset/${unique}`} element={<NewPassword />}/>
+					<Route path="*" element={<Navigate to="/register" replace={true} />} />
 				</Routes>
 			</div>
 		</div>

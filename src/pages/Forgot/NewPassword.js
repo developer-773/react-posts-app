@@ -1,146 +1,113 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../../context/AuthContext";
 import { MeContext } from "../../context/MeContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as Yup from "yup";
+import { UidContext } from "../../context/UidContext";
+import uuid from "react-uuid";
 
-export const Login = () => {
+export const NewPassword = () => {
 	const { token, setToken } = useContext(AuthContext);
 	const { me, setMe } = useContext(MeContext);
-	const navigate = useNavigate();
-	const [check, setCheck] = useState(false);
-	const [checkValues, setCheckValues] = useState(false);
+	const { unique, setUnique } = useContext(UidContext);
 
-	const handleShow = () => setCheck(true);
-	const handleErrShow = () => setCheckValues(true);
+	const navigate = useNavigate();
 
 	const initialValues = {
-		email: "",
 		password: "",
+		confirmPassword: "",
 	};
 
 	const onSubmit = (values) => {
-		if (values.email === me.email) {
-			axios
-				.post("http://localhost:8080/login", {
-					email: values.email,
-					password: values.password,
-				})
-				.then((res) => {
-					if (res.status === 200 || res.status === 201) {
-						setToken(res.data.accessToken);
-						setMe(res.data.user);
-						navigate("/");
-					}
-				})
-				.catch((err) => handleErrShow());
-		} else {
-			handleShow();
-		}
+		axios
+			.put(`http://localhost:8080/users/${me.id}`, {
+				email: me.email,
+				password: values.password,
+				firstname: me.firstname,
+				lastname: me.lastname,
+			})
+			.then((res) => {
+				if (res.status === 200) {
+					setToken(res.data.accessToken);
+					setMe(res.data.user);
+					navigate("/");
+					setUnique(`auth/${uuid()}/consumer=career&state=bslogin`);
+				}
+			})
+			.catch((err) => console.log(err));
 	};
 
-	const NotRegistered = () => {
-		return (
-			<p className={`text-danger fs-6 ${check} ? hidden : '' `}>
-				User does not exists.Would you like to{" "}
-				<Link to="/register">create a new account?</Link>
-			</p>
-		);
-	};
-
-	const InvalidData = () => {
-		return (
-			<div className={`${checkValues} ? hidden : '' `}>
-				<h3 className="text-center">Login failed!</h3>
-				<p className="text-danger fs-6">
-					Your email or password you entered is incorrect
-				</p>
-				<p className="text-danger fs-6">Please, try again.</p>
-			</div>
-		);
-	};
-
-	const LoginSchema = Yup.object({
-		email: Yup.string()
-			.email("Invalid an email!!!")
-			.required("Email Required!"),
+	const passwordResetSchema = Yup.object({
 		password: Yup.string().min(8, "Must be at least 8 characters!"),
+		confirmPassword: Yup.string().oneOf(
+			[Yup.ref("password"), null],
+			"Password does not match"
+		),
 	});
 
-	// const handleForm = (evt) => {
-	// 	evt.preventDefault();
-
-	// 	axios
-	// 		.post("http://localhost:8080/login", {
-	// 			email: email.current.value,
-	// 			password: password.current.value,
-	// 		})
-	// 		.then((res) => {
-	// 			console.log(res);
-	// 			if (res.status === 200) {
-	// 				setToken(res.data.accessToken);
-	// 				setMe(res.data.user);
-	// 				navigate("/");
-	// 			}
-	// 		})
-	// 		.catch((err) => console.log(err));
-	// };
+	const SpammingDetected = () => {
+		return (
+			<h2 className="text-center mt-5">
+				Dear spammer! <br /> Register first and try again!
+			</h2>
+		);
+	};
 
 	return (
-		<Formik
-			initialValues={initialValues}
-			onSubmit={onSubmit}
-			validationSchema={LoginSchema}
-		>
-			{(formik) => {
-				return (
-					<Form className="w-50 mx-auto my-5 p-5 shadow">
-						<h2 className="text-center mb-5">Login</h2>
-						<InvalidData />
-						<div className="mb-3">
-							<Field
-								name="email"
-								type="email"
-								className="form-control"
-								placeholder="Email..."
-							/>
-							<ErrorMessage
-								className="text-danger fs-6"
-								component={"p"}
-								name="email"
-							/>
-						</div>
-						<div className="mb-3">
-							<Field
-								name="password"
-								type="password"
-								className="form-control"
-								placeholder="Password..."
-							/>
-							<ErrorMessage
-								className="text-danger fs-6"
-								component={"p"}
-								name="password"
-							/>
-						</div>
-						<NotRegistered />
-						<button
-							type="submit"
-							disabled={!formik.dirty}
-							className="btn btn-primary"
+		<>
+			<Formik
+				initialValues={initialValues}
+				validationSchema={passwordResetSchema}
+				onSubmit={onSubmit}
+			>
+				{(formik) => {
+					return (
+						<Form
+							className="w-50 mx-auto 5 p-5 shadow"
+							style={{ marginTop: "11rem" }}
 						>
-							Submit
-						</button>
-
-						<p className="mt-4">
-							<Link to="/forgot">Forgot password?</Link>
-						</p>
-					</Form>
-				);
-			}}
-		</Formik>
+							<h2>Set new password</h2>
+							<p className="text-secondary mb-5">
+								Your password must be different previously used passwords.
+							</p>
+							<div className="mb-3">
+								<Field
+									name="password"
+									type="password"
+									className="form-control"
+								/>
+								<ErrorMessage
+									className="text-danger fs-6"
+									component={"p"}
+									name="password"
+								/>
+							</div>
+							<div className="mb-3">
+								<Field
+									name="confirmPassword"
+									type="password"
+									className="form-control"
+								/>
+								<ErrorMessage
+									className="text-danger fs-6"
+									component={"p"}
+									name="confirmPassword"
+								/>
+							</div>
+							<button
+								type="submit"
+								className="btn btn-primary mt-4"
+								disabled={!formik.dirty || !formik.isValid}
+							>
+								Submit
+							</button>
+						</Form>
+					);
+				}}
+			</Formik>
+		</>
 	);
 };
 
