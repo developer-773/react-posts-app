@@ -39,7 +39,7 @@ export const Forgot = () => {
 	};
 
 	useEffect(() => {
-		axios.get("http://localhost:8080/users").then((data) => setUser(data.data));
+		axios.get("https://plum-ill-piranha.cyclic.app/users").then((data) => setUser(data.data));
 		checkUserEmail();
 	}, [valu]);
 
@@ -92,7 +92,7 @@ export const Forgot = () => {
 				<input
 					type="text"
 					name="Your_Password_Reset_Link"
-					value={`http://localhost:3000/reset/${unique}`}
+					value={`https://plum-ill-piranha.cyclic.app/reset/${unique}`}
 					className="d-none"
 					onChange={() => {}}
 				/>

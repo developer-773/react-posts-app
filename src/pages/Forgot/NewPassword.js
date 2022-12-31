@@ -22,7 +22,7 @@ export const NewPassword = () => {
 
 	const onSubmit = (values) => {
 		axios
-			.put(`http://localhost:8080/users/${me.id}`, {
+			.put(`https://plum-ill-piranha.cyclic.app/users/${me.id}`, {
 				email: me.email,
 				password: values.password,
 				firstname: me.firstname,

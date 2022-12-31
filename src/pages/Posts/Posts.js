@@ -7,7 +7,7 @@ export const Posts = () => {
 
 	useEffect(() => {
 		axios
-			.get("http://localhost:8080/posts")
+			.get("https://plum-ill-piranha.cyclic.app/posts")
 			.then((res) => {
 				if (res.status === 200) {
 					setPost(res.data);

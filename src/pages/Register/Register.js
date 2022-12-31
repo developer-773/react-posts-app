@@ -22,7 +22,7 @@ export const Register = () => {
 
 	const onSubmit = (values) => {
 		axios
-			.post("http://localhost:8080/register", {
+			.post("https://plum-ill-piranha.cyclic.app/register", {
 				firstname: values.firstName,
 				lastname: values.lastName,
 				email: values.email,

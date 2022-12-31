@@ -24,7 +24,7 @@ export const Login = () => {
 	const onSubmit = (values) => {
 		if (values.email === me.email) {
 			axios
-				.post("http://localhost:8080/login", {
+				.post("https://plum-ill-piranha.cyclic.app/login", {
 					email: values.email,
 					password: values.password,
 				})
@@ -41,7 +41,6 @@ export const Login = () => {
 		}
 	};
 
-	// axios.delete(`http://localhost:8080/users/${18}`).then(res => console.log(res))
 
 	const NotRegistered = () => {
 		return (

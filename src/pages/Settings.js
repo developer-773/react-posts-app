@@ -27,7 +27,7 @@ export const Settings = () => {
 		evt.preventDefault();
 
 		axios
-			.post("http://localhost:8080/posts", {
+			.post("https://plum-ill-piranha.cyclic.app/posts", {
 				user_id: me.id,
 				title: titleRef.current.value,
 				body: bodyRef.current.value,

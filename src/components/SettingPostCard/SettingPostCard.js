@@ -17,7 +17,7 @@ export const SettingPostCard = ({ item, getPosts }) => {
 		evt.preventDefault();
 
 		axios
-			.put(`http://localhost:8080/posts/${id}`, {
+			.put(`https://plum-ill-piranha.cyclic.app/posts/${id}`, {
 				user_id: me.id,
 				title: titleRef.current.value,
 				user_name: `${me.firstname} ${me.lastname}`,
@@ -35,7 +35,7 @@ export const SettingPostCard = ({ item, getPosts }) => {
 
 	const handleDelete = () => {
 		axios
-			.delete(`http://localhost:8080/posts/${id}`)
+			.delete(`https://plum-ill-piranha.cyclic.app/posts/${id}`)
 			.then((res) => () => {})
 			.catch((err) => console.log(err));
             getPosts()

@@ -10,7 +10,7 @@ export const SinglePost = () => {
 
 
     const getPosts = async () => {
-        const data = await axios.get(`http://localhost:8080/posts?user_id=${me.id}`);
+        const data = await axios.get(`https://plum-ill-piranha.cyclic.app/posts?user_id=${me.id}`);
         setData(data.data)
     }
 
